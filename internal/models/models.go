@@ -51,7 +51,6 @@ type WeatherData struct {
 
 // ContextResponse represents the MCP response with contextual message
 type ContextResponse struct {
-	Type    string `json:"type"`
 	Message string `json:"message"`
 	Data    struct {
 		City        string    `json:"city"`
@@ -65,7 +64,6 @@ type ContextResponse struct {
 
 // ErrorResponse represents error responses
 type ErrorResponse struct {
-	Type    string `json:"type"`
 	Error   string `json:"error"`
 	Message string `json:"message"`
 }

@@ -47,6 +47,7 @@ func (w *weatherService) GetWeatherData(ctx context.Context, city string) (*mode
 	params.Add("lang", "tr")      // Turkish language
 
 	reqURL := fmt.Sprintf("%s?%s", baseURL, params.Encode())
+	w.logger.Debug("Weather API URL", "url", reqURL)
 
 	// Create HTTP request
 	req, err := http.NewRequestWithContext(ctx, "GET", reqURL, nil)

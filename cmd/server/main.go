@@ -40,7 +40,7 @@ func main() {
 	server := mcp_golang.NewServer(stdio.NewStdioServerTransport())
 
 	// Register get_weather tool
-	err = server.RegisterTool("get_weatherss", "Get current weather for a city", func(args GetWeatherArgs) (*mcp_golang.ToolResponse, error) {
+	err = server.RegisterTool("get_weather", "Get current weather for a city", func(args GetWeatherArgs) (*mcp_golang.ToolResponse, error) {
 		if args.City == "" {
 			return nil, fmt.Errorf("city is required")
 		}
