@@ -1,0 +1,12 @@
+{
+    "mcpServers": {
+      "weatherMCP": {
+        "command": "/Users/farukserhattunc/DevFst/mcpServer/mcp-weather-server",
+        "args": [],
+        "type": "stdio",
+        "env": {
+          "LOG_LEVEL": "info"
+        }
+      }
+    }
+  }
