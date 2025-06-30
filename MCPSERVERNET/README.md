@@ -11,7 +11,10 @@ Gerçek zamanlı hava durumu verisine dayalı bir MCP (Model Context Protocol) s
 - 📦 Temiz mimari, arayüz odaklı servisler
 - 🚀 .NET 9.0 ile modern C# geliştirme
 
-## Proje Yapısı
+## Proje Yapısı 3.37 , 2,88
+                2,16 ,  2,57
+                3.06 , 1,69
+                2,04 ,  2.17
 
 ```
 MCPSERVERNET/
@@ -125,4 +128,4 @@ dotnet publish -c Release -o bin/Release
 
 Bu proje MIT lisansı altında lisanslanmıştır. 
 
-export OWM_API_KEY=709c2cca260627a457bc10b00fe06e19 && npx @modelcontextprotocol/inspector dotnet run --project MCPServerNet.Console
+export OWM_API_KEY="" && npx @modelcontextprotocol/inspector dotnet run --project MCPServerNet.Console
