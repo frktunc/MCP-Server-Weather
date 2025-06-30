@@ -1,0 +1,13 @@
+/Users/farukserhattunc/DevFst/mcpServer/MCPSERVERNET/MCPServerNet.Core/bin/Debug/net9.0/MCPServerNet.Core.deps.json
+/Users/farukserhattunc/DevFst/mcpServer/MCPSERVERNET/MCPServerNet.Core/bin/Debug/net9.0/MCPServerNet.Core.dll
+/Users/farukserhattunc/DevFst/mcpServer/MCPSERVERNET/MCPServerNet.Core/bin/Debug/net9.0/MCPServerNet.Core.pdb
+/Users/farukserhattunc/DevFst/mcpServer/MCPSERVERNET/MCPServerNet.Core/obj/Debug/net9.0/MCPServerNet.Core.csproj.AssemblyReference.cache
+/Users/farukserhattunc/DevFst/mcpServer/MCPSERVERNET/MCPServerNet.Core/obj/Debug/net9.0/MCPServerNet.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/farukserhattunc/DevFst/mcpServer/MCPSERVERNET/MCPServerNet.Core/obj/Debug/net9.0/MCPServerNet.Core.AssemblyInfoInputs.cache
+/Users/farukserhattunc/DevFst/mcpServer/MCPSERVERNET/MCPServerNet.Core/obj/Debug/net9.0/MCPServerNet.Core.AssemblyInfo.cs
+/Users/farukserhattunc/DevFst/mcpServer/MCPSERVERNET/MCPServerNet.Core/obj/Debug/net9.0/MCPServerNet.Core.csproj.CoreCompileInputs.cache
+/Users/farukserhattunc/DevFst/mcpServer/MCPSERVERNET/MCPServerNet.Core/obj/Debug/net9.0/MCPServerNet.Core.sourcelink.json
+/Users/farukserhattunc/DevFst/mcpServer/MCPSERVERNET/MCPServerNet.Core/obj/Debug/net9.0/MCPServerNet.Core.dll
+/Users/farukserhattunc/DevFst/mcpServer/MCPSERVERNET/MCPServerNet.Core/obj/Debug/net9.0/refint/MCPServerNet.Core.dll
+/Users/farukserhattunc/DevFst/mcpServer/MCPSERVERNET/MCPServerNet.Core/obj/Debug/net9.0/MCPServerNet.Core.pdb
+/Users/farukserhattunc/DevFst/mcpServer/MCPSERVERNET/MCPServerNet.Core/obj/Debug/net9.0/ref/MCPServerNet.Core.dll

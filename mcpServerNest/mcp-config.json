@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "weather-server": {
+      "command": "npm",
+      "args": ["run", "start:mcp"],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  }
+} 

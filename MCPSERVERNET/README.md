@@ -1,4 +1,4 @@
-# MCP Weather Server
+# MCP Weather Server (.NET)
 
 Gerçek zamanlı hava durumu verisine dayalı bir MCP (Model Context Protocol) sunucusu. Bu sunucu, istemciden gelen şehir bilgisine göre OpenWeatherMap API üzerinden hava durumunu çeker ve MCP protokolü üzerinden yanıtlar üretir.
 
@@ -9,34 +9,33 @@ Gerçek zamanlı hava durumu verisine dayalı bir MCP (Model Context Protocol) s
 - 📝 Yapılandırılabilir loglama
 - 🛡️ Güvenli API anahtarı yönetimi
 - 📦 Temiz mimari, arayüz odaklı servisler
-- 📈 OpenTelemetry ile gözlemlenebilirlik (isteğe bağlı)
+- 🚀 .NET 9.0 ile modern C# geliştirme
 
 ## Proje Yapısı
 
 ```
-mcp-weather-server/
-├── cmd/
-│   └── server/
-│       └── main.go              # Ana uygulama giriş noktası (MCP server)
-├── internal/
-│   ├── config/
-│   │   └── config.go            # Konfigürasyon yönetimi
-│   ├── models/
-│   │   └── models.go            # Veri modelleri
-│   └── service/
-│       └── weather_service.go   # Hava durumu servisi
-├── pkg/
-│   └── logger/
-│       └── logger.go            # Loglama paketi
-├── go.mod                       # Go modül dosyası
-└── README.md                    # Bu dosya
+MCPSERVERNET/
+├── MCPServerNet.Console/
+│   ├── Program.cs                 # Ana uygulama giriş noktası (MCP server)
+│   └── MCPServerNet.Console.csproj
+├── MCPServerNet.Core/
+│   ├── Models/
+│   │   ├── WeatherData.cs         # Hava durumu veri modelleri
+│   │   └── Configuration.cs       # Konfigürasyon modeli
+│   ├── Services/
+│   │   ├── IWeatherService.cs     # Hava durumu servisi arayüzü
+│   │   ├── WeatherService.cs      # Hava durumu servisi implementasyonu
+│   │   └── ConfigurationService.cs # Konfigürasyon servisi
+│   └── MCPServerNet.Core.csproj
+├── MCPServerNet.sln
+└── README.md
 ```
 
 ## Kurulum
 
 1. **Bağımlılıkları yükleyin:**
    ```bash
-   go mod tidy
+   dotnet restore
    ```
 
 2. **OpenWeatherMap API anahtarını alın:**
@@ -54,7 +53,7 @@ mcp-weather-server/
 ## Çalıştırma
 
 ```bash
-go run cmd/server/main.go
+dotnet run --project MCPServerNet.Console
 ```
 
 Sunucu, MCP protokolü üzerinden stdio (standart giriş/çıkış) ile çalışır. Herhangi bir HTTP endpoint açmaz.
@@ -87,9 +86,7 @@ Sunucu, `get_weather` adında bir tool sağlar. MCP uyumlu bir istemci ile aşa�
 
 Yanıt, OpenWeatherMap API'den alınan ham hava durumu verisinin JSON formatında döndürülmüş halidir.
 
-## Test Etme
 
-Bir MCP istemcisi ile stdio üzerinden test edebilirsiniz. (Örnek istemci için [mcp-golang örneklerine](https://github.com/metoro-io/mcp-golang) bakabilirsiniz.)
 
 ## Konfigürasyon
 
@@ -102,29 +99,30 @@ Bir MCP istemcisi ile stdio üzerinden test edebilirsiniz. (Örnek istemci için
 
 ### Test Çalıştırma
 ```bash
-go test ./...
-```
-
-### Linting
-```bash
-golangci-lint run
+dotnet test
 ```
 
 ### Build
 ```bash
-go build -o bin/server cmd/server/main.go
+dotnet build
+```
+
+### Release Build
+```bash
+dotnet publish -c Release -o bin/Release
 ```
 
 ## Teknolojiler
 
-- **Go 1.21+** - Programlama dili
-- **OpenTelemetry** - Observability (isteğe bağlı)
+- **.NET 9.0** - Programlama platformu
+- **C#** - Programlama dili
+- **ModelContextProtocol** - MCP SDK
 - **OpenWeatherMap API** - Hava durumu verisi
+- **Microsoft.Extensions** - Dependency Injection, Configuration, Logging
 - **Structured Logging** - JSON formatında loglama
-- **MCP Protocol** - Model Context Protocol ile iletişim
 
 ## Lisans
 
 Bu proje MIT lisansı altında lisanslanmıştır. 
 
-npx @modelcontextprotocol/inspector ./mcp-weather-server
+export OWM_API_KEY=709c2cca260627a457bc10b00fe06e19 && npx @modelcontextprotocol/inspector dotnet run --project MCPServerNet.Console
