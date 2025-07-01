@@ -59,10 +59,12 @@ export class McpWeatherToolService {
     city1: string;
     city2: string;
   }): Promise<string> {
+    //deneme
     try {
       const [weather1, weather2] = await Promise.all([
         this.weatherService.getWeatherData(input.city1),
         this.weatherService.getWeatherData(input.city2),
+        
       ]);
 
       let comparison = `Weather Comparison between ${weather1.name} and ${weather2.name}:\n\n`;
